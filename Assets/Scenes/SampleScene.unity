@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 342627390}
   - component: {fileID: 342627389}
   - component: {fileID: 342627388}
+  - component: {fileID: 342627392}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -256,6 +257,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &342627392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342627387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8da7490dcd06674eae2e8565db82d2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Camera
+  Player: {fileID: 2058205997}
 --- !u!1 &2058205997
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,10 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 178f81ca3a19a3244ba87930e47900a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  speed: 5
-  maxSpeed: 8
-  friction: 0.1
-  velocity: {x: 0, y: 0}
+  speed: 0.5
 --- !u!212 &2058205999
 SpriteRenderer:
   serializedVersion: 2
@@ -378,7 +389,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 0
+  m_LinearDamping: 9
   m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
