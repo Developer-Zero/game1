@@ -26,6 +26,6 @@ public class PlayerController : MonoBehaviour
         if (Keyboard.current.dKey.isPressed)
             input.x += 1;
 
-        rb.velocity += input.normalized * speed;
+        rb.linearVelocity += input.normalized * speed;
     }
 }
